@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Global styles */
+html,
+body {
+  height: 100%;
+}
+
+/* Custom dark background */
+body {
+  background-color: #050814;
+  color: #e5e7eb;
+}
