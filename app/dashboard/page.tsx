@@ -6,7 +6,6 @@ import { LineChartCard } from '@/components/LineChartCard';
 import { BarChartCard } from '@/components/BarChartCard';
 import { HeatmapCard } from '@/components/HeatmapCard';
 import { CriticalTopicsTable } from '@/components/CriticalTopicsTable';
-import { Users, BookOpen, TrendingUp, Award } from 'lucide-react';
 
 // Mock data
 const mockStudentsData = [
@@ -47,30 +46,22 @@ export default function DashboardPage() {
           <KpiCard
             title="Total de Alunos"
             value="280"
-            icon={Users}
-            trend="+12%"
-            color="bg-blue"
+            subtitle="+12% vs mês anterior"
           />
           <KpiCard
             title="Cursos Ativos"
             value="5"
-            icon={BookOpen}
-            trend="+2"
-            color="bg-green"
+            subtitle="+2 novos cursos"
           />
           <KpiCard
             title="Taxa de Conclusão"
             value="72%"
-            icon={TrendingUp}
-            trend="+8%"
-            color="bg-purple"
+            subtitle="+8% de crescimento"
           />
           <KpiCard
             title="Certificados Emitidos"
             value="156"
-            icon={Award}
-            trend="+24"
-            color="bg-orange"
+            subtitle="+24 este mês"
           />
         </div>
 
