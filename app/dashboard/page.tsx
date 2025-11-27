@@ -1,56 +1,39 @@
-'use client';
-
-import { DashboardHeader } from '@/components/DashboardHeader';
-import { KpiCard } from '@/components/KpiCard';
-import { BarchartCard } from '@/components/BarchartCard';
-
-const mockCourseData = [
-  { name: 'Python Basics', students: 150, completion: 85 },
-  { name: 'Web Development', students: 120, completion: 72 },
-  { name: 'Data Science', students: 95, completion: 68 },
-  { name: 'Machine Learning', students: 80, completion: 45 },
-  { name: 'React Masterclass', students: 110, completion: 78 }
-];
-
-export default function DashboardPage() {
+export default function Dashboard() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
-      <DashboardHeader />
-
-      <div className="container mx-auto px-4 py-8">
-        {/* KPI Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
-          <KpiCard
-            title="Total de Alunos"
-            value="280"
-            subtitle="+12% vs mês anterior"
-          />
-          <KpiCard
-            title="Cursos Ativos"
-            value="5"
-            subtitle="+2 novos cursos"
-          />
-          <KpiCard
-            title="Taxa de Conclusão"
-            value="72%"
-            subtitle="+8% de crescimento"
-          />
-          <KpiCard
-            title="Certificados Emitidos"
-            value="156"
-            subtitle="+24 este mês"
-          />
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 p-8">
+      <h1 className="text-4xl font-bold text-gray-900 mb-2">Mentor IA Dashboard</h1>
+      <p className="text-lg text-gray-600 mb-8">Painel Analítico da Plataforma Educacional</p>
+      
+      <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
+        <div className="bg-white rounded-lg shadow-lg p-6">
+          <h3 className="text-sm font-semibold text-gray-600">Total de Alunos</h3>
+          <p className="text-3xl font-bold text-blue-600 mt-2">280</p>
+          <p className="text-sm text-green-600 mt-1">+12% vs mês anterior</p>
         </div>
-
-        {/* Chart */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
-          <BarchartCard
-            title="Desempenho por Curso"
-            data={mockCourseData}
-            dataKey="completion"
-            color="#8b5cf6"
-          />
+        
+        <div className="bg-white rounded-lg shadow-lg p-6">
+          <h3 className="text-sm font-semibold text-gray-600">Cursos Ativos</h3>
+          <p className="text-3xl font-bold text-green-600 mt-2">5</p>
+          <p className="text-sm text-green-600 mt-1">+2 novos cursos</p>
         </div>
+        
+        <div className="bg-white rounded-lg shadow-lg p-6">
+          <h3 className="text-sm font-semibold text-gray-600">Taxa de Conclusão</h3>
+          <p className="text-3xl font-bold text-purple-600 mt-2">72%</p>
+          <p className="text-sm text-green-600 mt-1">+8% de crescimento</p>
+        </div>
+        
+        <div className="bg-white rounded-lg shadow-lg p-6">
+          <h3 className="text-sm font-semibold text-gray-600">Certificados Emitidos</h3>
+          <p className="text-3xl font-bold text-orange-600 mt-2">156</p>
+          <p className="text-sm text-green-600 mt-1">+24 este mês</p>
+        </div>
+      </div>
+      
+      <div className="bg-white rounded-lg shadow-lg p-8">
+        <h2 className="text-2xl font-bold text-gray-900 mb-4">Visão Geral</h2>
+        <p className="text-gray-600">Seu dashboard está funcionando corretamente! 🎉</p>
+        <p className="text-gray-600 mt-2">Componentes disponíveis estão sendo integrados gradualmente.</p>
       </div>
     </div>
   );
