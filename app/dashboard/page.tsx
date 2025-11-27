@@ -3,8 +3,7 @@
 import { DashboardHeader } from '@/components/DashboardHeader';
 import { KpiCard } from '@/components/KpiCard';
 import { LineChartCard } from '@/components/LineChartCard';
-import { BarChartCard } from '@/components/BarChartCard';
-import { HeatmapCard } from '@/components/HeatmapCard';
+import { BarchartCard } from '@/components/BarchartCard';
 import { CriticalTopicsTable } from '@/components/CriticalTopicsTable';
 
 // Mock data
@@ -83,13 +82,6 @@ export default function DashboardPage() {
           />
         </div>
 
-        {/* Additional Charts */}
-        <div className="grid grid-cols-1 gap-6 mb-8">
-          <HeatmapCard
-            title="Mapa de Calor - Atividade de Aprendizado"
-            data={mockStudentsData}
-          />
-        </div>
 
         {/* Critical Topics Table */}
         <div className="grid grid-cols-1 gap-6">
