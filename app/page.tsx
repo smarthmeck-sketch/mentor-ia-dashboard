@@ -1,7 +1,7 @@
+'use client';
+
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
-
-'use client';
 
 export default function Home() {
   const [email, setEmail] = useState('');
